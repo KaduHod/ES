@@ -7,9 +7,19 @@ class reg{
     this.MAX = max
   }
   print(){console.log(this)}
-}
+  add(chave){
+    insercaoOrdenada(this, chave)
+  }
 
-let listaOrdenada = new reg(50)
+  exclui(chave){
+    exclusao(this, chave)
+  }
+
+  binarySearch(chave){
+    console.log('Valor está no índice: ')
+    return buscaBinaria(this, chave)
+  }
+}
 
 function insercaoOrdenada(l, chave){
   if(l.Nelementos >= l.MAX) return false
@@ -50,23 +60,25 @@ function exclusao(l, chave){
 
 }
 
-insercaoOrdenada(listaOrdenada, 10)
+/*insercaoOrdenada(listaOrdenada, 10)
 insercaoOrdenada(listaOrdenada, 0)
 insercaoOrdenada(listaOrdenada, 502)
 insercaoOrdenada(listaOrdenada, 530)
 insercaoOrdenada(listaOrdenada, 540)
 insercaoOrdenada(listaOrdenada, 250)
 insercaoOrdenada(listaOrdenada, 150)
-// console.log(buscaBinaria(listaOrdenada, 530), 530)
-// console.log(buscaBinaria(listaOrdenada, 540), 540)
-// console.log(buscaBinaria(listaOrdenada, 10), 10)
-// console.log(buscaBinaria(listaOrdenada, 0), 0)
-//console.log(buscaBinaria(listaOrdenada, 500), 500)
+console.log(buscaBinaria(listaOrdenada, 530), 530)
+console.log(buscaBinaria(listaOrdenada, 540), 540)
+console.log(buscaBinaria(listaOrdenada, 10), 10)
+console.log(buscaBinaria(listaOrdenada, 0), 0)
+console.log(buscaBinaria(listaOrdenada, 500), 500)
 exclusao(listaOrdenada, 540)
 exclusao(listaOrdenada, 250)
 exclusao(listaOrdenada, 150)
 exclusao(listaOrdenada, 502)
-// /exclusao(listaOrdenada, 250)
-//exclusao(listaOrdenada, 0)
-//exclusao(listaOrdenada, 502)
-listaOrdenada.print()
+/exclusao(listaOrdenada, 250)
+exclusao(listaOrdenada, 0)
+exclusao(listaOrdenada, 502)*/
+
+
+module.exports = reg
